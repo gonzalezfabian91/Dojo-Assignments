@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's that Pokemon</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="leftpane"></div>
+        <div id="rightpane">
+            <h1 id="name"></h1>
+            <img src="" alt="">
+            <h2 id='intro'>Click any Pokemon</h2>
+            <p id='info'></p> 
+        </div>
+    </div>
+    <script>
+        function AddImages() {
+                var imgurl = 'raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/';
+                var output = '';
+                for (var i=1;i<=151;i++) {
+                    output+="<p>\n<img src='http://" + imgurl + i + ".png' class='" + i + "'>\n</p>";
+                }
+                $("#leftpane").html(output);
+            }   
+            
+        AddImages();
+
+        $("#leftpane img").click(function() {
+            $('#intro').hide();
+            var imgid = $(this).attr('class');
+            $.get('https://pokeapi.co/api/v2/pokemon/'+imgid, function(res){
+                console.log(res);
+                $('#name').html(res.name);
+                $('#rightpane img').attr('src',res.sprites.front_shiny);
+                var types_str = '<ul>';
+                for(var i = 0; i < res.types.length; i++){
+                    types_str += '<li>'+res.types[i].type.name+'</li>';
+                }
+                types_str += '</ul>';
+                $('#info').html('<h2>Types</h2><p>'+types_str+'</p><h2>Height</h2><p>'+res.height+'</p><h2>Weight</h2><p>'+res.weight+'</p>')
+            });
+        })
+    </script>
+</body>
+</html>

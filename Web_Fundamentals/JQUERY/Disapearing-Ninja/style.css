@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+div.wrapper{
+    width: 1000px;
+    min height: 500px;
+    margin: auto;
+}
+    .header{
+        margin-bottom: 20px;
+    }
+    .ninjas{
+        display: inline-block;
+    }
+        .ninjas img{
+            width: 240px;
+            border: black solid;
+        }
+    .footer button{
+        margin: 20px;
+        padding: 10px;
+        background-color: green;
+        border: black solid;
+        color: white;
+    }

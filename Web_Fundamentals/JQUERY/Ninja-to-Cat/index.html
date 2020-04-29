@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Ninja to Cat</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="javascript" href="action.js">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                alert('You are now working with JQuery');
+
+                $('.ninja-cat0').click(function(){
+                    $(this).find('img').toggle();
+                })
+
+                $('.ninja-cat1').click(function(){
+                    $(this).find('img').toggle();
+                })
+
+                $('.ninja-cat2').click(function(){
+                    $(this).find('img').toggle();
+                })
+
+                $('.ninja-cat3').click(function(){
+                    $(this).find('img').toggle();
+                })
+
+                $('.ninja-cat4').click(function(){
+                    $(this).find('img').toggle();
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Ninja to Cat Assignment</h1>
+        <div class="ninja-cat0">
+            <img src="./img/ninja0.png"/>
+            <img src="./img/cat0.png" style="display:none"/>
+        </div>
+        <div class="ninja-cat1">
+            <img src="./img/ninja1.png"/>
+            <img src="./img/cat1.png" style="display:none"/>
+        </div>
+        <div class="ninja-cat2">
+            <img src="./img/ninja2.png"/>
+            <img src="./img/cat2.png" style="display:none"/>
+        </div>
+        <div class="ninja-cat3">
+            <img src="./img/ninja3.png"/>
+            <img src="./img/cat3.png" style="display:none"/>
+        </div>
+        <div class="ninja-cat4">
+            <img src="./img/ninja4.png"/>
+            <img src="./img/cat4.png" style="display:none"/>
+        </div>
+    </body>
