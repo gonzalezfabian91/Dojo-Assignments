@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 10px;
+}
+#wrapper{
+    width: 1200px;
+    background-color: darkblue;
+}
+#header{
+    min-height: 70px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: red;
+    color: lightgray;
+}
+#list{
+    min-height: 200px;
+    width: 200px;
+    margin-right: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: teal;
+    color: lightgray;
+    line-height: 0px;
+    text-decoration: underline;
+}
+#main_content{
+    min-height: 500px;
+    width: 930px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    background-color: black;
+    color: lightgray;
+    line-height: 15px;
+}
+.teal{
+    color: teal;
+    text-decoration: underline;
+}
+.blueviolet{
+    color: blueviolet;
+}
+#more_information{
+    min-height: 30px;
+    border-radius: 20px;
+    background-color: gray;
+    color: lightgray;
+}

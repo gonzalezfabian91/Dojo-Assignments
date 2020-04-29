@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Registration Form</title>
+    </head>
+    <body>
+        <h1>My Registration Form</h1>
+        <form action="process.php" method="post">
+            <p>
+                <label for="First Name">First Name:&nbsp;&nbsp;</label>
+                <input type="text" id="First Name" name="First Name">
+            </p>
+            <p>
+                <label for="Last Name">Last Name:&nbsp;&nbsp;</label>
+                <input type="text" id="Last Name" name="Last Name">
+            </p>
+            <p>
+                <label for="Email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="Email" name="Email">
+            </p>
+            <p>
+                <label for="Password">Password:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="Password" id="Password" name="Password">
+            </p>
+            <p>
+                <label for="PW Confirm">PW Confirm:</label>
+                <input type="text" id="PW Confirm" name="PW Confirm">
+            </p>
+            <p>
+                <label for="Birthday">Birthday:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="date">
+            </p>
+            <p>
+                <label for="Male">Male</label>
+                <input type="radio" id="Male" name="gender" value="Male">
+                <label for="Female">Female</label>
+                <input type="radio" id="Female" name="gender" value="Female">
+                <label for="Other">Other</label>
+                <input type="radio" id="Other" name="gender" value="Other">
+            </p>
+            <p>A short description about yourself:</p>
+            <textarea name="description" cols="30" rows="5"></textarea>
+            <p>Favorite Language
+                <select name="Favorite Language">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Java Script">Java Script</option>
+                </select>
+            </p>
+            <p>
+                <input type="Submit" value="Submit">
+            </p>
+
+        </form>
+    </body>
+</html>

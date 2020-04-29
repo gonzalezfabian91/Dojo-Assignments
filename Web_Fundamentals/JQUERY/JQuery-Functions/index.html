@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>JQuery Functions</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                alert('you are now working with jQuery!');
+
+                $('#hide').click(function(){
+                    $('li').hide();
+                })
+
+                $('#fadein').click(function(){
+                    $('p').fadeIn("slow");
+                })
+
+                $('h2').html('CALI!');
+
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Group 2 JQuery Functions</h1>
+        <button id="hide">This will hide the list</button>
+        <button id="fadein">This will cause fadeIn on paragraph</button>
+        <ul>
+            <li>Fabian</li>
+            <li>Chris</li>
+            <li>Jason</li>
+        </ul>
+        <p hidden>Coding Dojo!</p>
+        <h2>Not supposed to say this</h2>
+    </body>
+</html>
