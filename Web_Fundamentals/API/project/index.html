@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>SOA</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <Script>
+            $(document).ready(function(){
+                
+                $('#swap').click(function(){
+                    $('p').toggle();
+                });
+            })
+        </Script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>SOA</h1>
+            </div>
+            <div class="clubs">
+                <div class="sons">
+                    <img class="sons_img" src="https://i.pinimg.com/originals/6d/83/4c/6d834cf5d3b92eff940cba035daab1ce.jpg" alt="son">
+                </div>
+                <div class="mayans">
+                    <img class="mayans_img" src="https://i.pinimg.com/originals/7f/24/35/7f2435df3ef2ce074ac80f5148055c7c.jpg" alt="mayans">
+                </div>
+            </div>
+            <button id="swap">Switch Clubs</button>
+            <div class="info">
+                <p id="sons" class="sons_info">The Sons of Anarchy Motorcycle Club (SAMCRO) is a one-percenter motorcycle gang. The club was formed by John Teller and Piermont "Piney" Winston, two Vietnam War veterans, in 1967 in Charming, California.</p>
+                <p id="mayans" class="mayan_info" style="display: none;">The Mayans Motorcycle Club is a one-percenter motorcycle gang that controls Southern California and Nevada. The President of their Oakland chapter is Marcus Álvarez and all of their members seem to be Hispanic, most likely Mexican. Their insignia is a Mayan tribal symbol.</p>
+            </div>
+        </div>
+    </body>
+ 

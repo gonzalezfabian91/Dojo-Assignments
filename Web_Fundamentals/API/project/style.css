@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 1000px;
+    min-height: 800px;
+    color: white;
+    background-image: radial-gradient(circle, white,black);
+}
+.header{
+    min-width: 800px;
+    min-height: 50px;
+    font-size: 90px;
+    font-family: AppleMyunjo;
+    text-align: center;
+}
+.clubs{
+    min-width: 800px;
+    min-height: 200px;
+}
+    .sons{
+        min-width: 300px;
+        min-height: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 180px;
+        vertical-align: top;
+        display: inline-block;
+    }
+        .sons img{
+            width: 167px;
+            margin-left: 60px;
+        }
+    .mayans{
+        min-width: 300px;
+        min-height: 300px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        display: inline-block;
+    }
+        .mayans img{
+            width: 211px;
+            margin-top: 16px;
+            margin-left: 44px;
+        }
+.info{
+    min-width: 800px;
+    min-height: 200px;
+    padding: 20px;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+    border: 10px solid white;
+    text-align: center;
+}
+    .info p{
+        margin-top: 14px;
+    }
+button{
+    margin-left: 458px;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
