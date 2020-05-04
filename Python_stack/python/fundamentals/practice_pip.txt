@@ -1,0 +1,7 @@
+Pip list - a list of the installed packages, including editable. They are usually listed in a case-sensitive sorted order. 
+
+Deactivate - it is used when you want to leave (deactivate) the environment you are currently in. 
+
+pip3list - pip3list is used when you do not have your environment activated
+
+Source my_enviorments/py3env/bin/activate - you use this command when you want to activate an environment (specific environment that wants to be activated must be included in command ex: py3env)
