@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Dojo Survey</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <form action="/results" method="POST">
+                {% csrf_token %}
+                <div class="name">
+                    <label for="student">Your Name:</label>
+                    <input type="text" name="student">
+                </div>
+                <div class="location">
+                    <label for="campus">Dojo Location:</label>
+                    <select name="location" id="">
+                        <option value="OC">OC</option>
+                        <option value="Burbank">Burbank</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Boise">Boise</option>
+                        <option value="Oakland">Oakland</option>
+                        <option value="San Jose">San Jose</option>
+                    </select>
+                </div>
+                <div class="language">
+                    <label for="stack">Favorite Language:</label>
+                    <select name="language" id="">
+                        <option value="Python">Python</option>
+                        <option value="C#">C#</option>
+                        <option value="Mern">Mern</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </div>
+                <div class="com">
+                    <label for="comment">Comment (Optional):</label>
+                    <Textarea name="comment" cols="50" rows="5"></Textarea>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </body>

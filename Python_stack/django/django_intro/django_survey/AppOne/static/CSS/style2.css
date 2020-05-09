@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    border: 3px solid black;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+.container ul{
+    list-style: inside;
+}
+.container li{
+    margin-top: 5px;
+}
+.button{
+    margin-top: 48px;
+    margin-left: 420px;
+}

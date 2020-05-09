@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-10" style="margin: auto;">
+        <div class="gold">
+        <h4 class="Gold:">Your Gold:</h4>
+        </div>
+        <div class="yourgold">
+            <p>{{request.session.gold}}</p>
+        </div>
+    <div class="findGold">
+        <form action="/process_money" method="POST">
+        {% csrf_token %}
+        <div class="farm">
+            <h3>Farm</h3>
+            <p>(earns 10-20 golds)</p>
+            <button type="submit" name="gold" value="farm">Find Gold!</button>
+        </div>
+        <div class="cave">
+            <h3>Cave</h3>
+            <p>(earns 5-10 golds)</p>
+            <button type="submit" name="gold" value="cave">Find Gold!</button>
+        </div>
+        <div class="house">
+            <h3>House</h3>
+            <p>(earns 2-5 gold)</p>
+            <button type="submit" name="gold" value="house">Find Gold!</button>
+        </div>
+        <div class="casino">
+            <h3>Casino</h3>
+            <p>(earns/takes 0-50 golds)</p>
+            <button type="submit" name="gold" value="casino">Find Gold!</button>
+        </div>
+    </div>
+        <div class="activities">
+            <h4>Activities:</h4>
+            <div class="list">
+                <ul>
+                    {% for value in request.session.activities %}
+                    <p>{{ value }}</p>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

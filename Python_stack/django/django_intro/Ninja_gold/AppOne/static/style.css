@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.gold{
+    display: inline-block;
+}
+.yourgold{
+    display: inline-block;
+    vertical-align: middle;
+}
+.yourgold p{
+    width: 100px;
+    border: solid black 2px;
+    padding-left: 10px;
+}
+.house{
+    display: inline-block;
+    border: solid black 2px;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+}
+.farm{
+    display: inline-block;
+    border: solid black 2px;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+}
+.cave{
+    display: inline-block;
+    border: solid black 2px;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+}
+.casino{
+    display: inline-block;
+    border: solid black 2px;
+    width: 200px;
+    height: 150px;
+    vertical-align: top;
+    text-align: center;
+}
+.list{
+    border: 1px solid lightgrey;
+    width: 815px;
+    height: 200px;
+}
+.list ul{
+    list-style-type: none;
+    margin-left: 10px;
+}

@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    border: 3px solid black;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+.name,.language,.location,.com{
+    margin-bottom: 5px;
+}
+.name input{
+    margin-left: 75px;
+}
+.location select{
+    margin-left: 55px;
+}
+.language select{
+    margin-left: 28px;
+}
+.com label{
+    display: block;
+}
+.com textarea{
+    display: block;
+}
+.button{
+    text-align: right;
+    margin-right: 20px;
+}
