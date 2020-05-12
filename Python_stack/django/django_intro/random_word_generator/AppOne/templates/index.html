@@ -10,7 +10,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hello</h1>
+        <div class="header">
+            <h1>Random Word (attempt #{{ request.session.counter }})</h1>
+        </div>
+        <div class="words">
+            <p>{{ random_word }}</p>
+        </div>
+        <div class="generator">
+            <a href="/addtocount" =button><button>Generate</button></a>
+            <a href="/resetattempt" =button><button>Reset Attempts</button></a>
+        </div>
     </div>
 </body>
 </html>

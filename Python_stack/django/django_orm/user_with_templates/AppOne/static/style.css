@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    margin: auto;
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+}
+.container h1{
+    text-align: center;
+    margin-top: 10px;
+}
+.container table{
+    margin: auto;
+    border-collapse: collapse;
+}
+.container td,th{
+    width: 300px;
+    text-align: left;
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+.container tr:nth-child(even){
+    background-color: #DDDDDD;
+}
+.container hr{
+    margin-left: 120px;
+    width: 550px;
+    margin-top: 20px;
+    height: 0px;
+    border: none;
+    border-top: 1px solid black;
+}
+.form_row_one_fname, .form_row_one_lname, .form_row_two_email, .form_row_two_age{
+    display: inline-block;
+}
+.form_row_one_fname{
+    margin-left: 176px;
+    margin-top: 20px;
+}
+.form_row_two_email{
+    margin-left: 176px;
+    margin-top: 20px;
+}
+.form_row_two_email input{
+    margin-left: 33px;
+}
+.form_row_two_age input{
+    margin-left: 43px;
+}
+.form_row_three input{
+    margin-top: 25px;
+    margin-left: 373px;
+}

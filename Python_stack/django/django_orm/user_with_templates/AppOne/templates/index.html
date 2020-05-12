@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>All the Users</h1>
+        <table>
+            {% for user in list_of_users %}
+            <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>AGE</th>
+            </tr>
+            <tr>
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                <td>{{ user.email_address }}</td>
+                <td>{{ user.age }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <hr>
+        <h1>Add a User</h1>
+        <form action="/">
+            {% csrf_token %}
+            <div class="form_row_one_fname">
+                <label class="fname" for="first_name">Fisrt Name:</label>
+                <input type="text" name="first_name">
+            </div>
+            <div class="form_row_one_lname">
+                <label class="lname" for="last_name">Last Name:</label>
+                <input type="text" name="last_name">
+            </div>
+            <div class="form_row_two_email">
+                <label class="emial" for="email_address">Email:</label>
+                <input type="text" name="email_address">
+            </div>
+            <div class="form_row_two_age">
+                <label class="how_old" for="age">Age:</label>
+                <input type="number" for="age">
+            </div>
+            <div class="form_row_three">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

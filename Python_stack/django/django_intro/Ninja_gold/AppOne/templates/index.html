@@ -41,13 +41,9 @@
         </div>
     </div>
         <div class="activities">
-            <h4>Activities:</h4>
+            <h5>Activities:</h5>
             <div class="list">
-                <ul>
-                    {% for value in request.session.activities %}
-                    <p>{{ value }}</p>
-                    {% endfor %}
-                </ul>
+                <p>{{ earned }}</p>
             </div>
         </div>
         </form>

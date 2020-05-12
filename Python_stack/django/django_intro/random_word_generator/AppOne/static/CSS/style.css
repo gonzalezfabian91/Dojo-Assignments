@@ -3,7 +3,38 @@
     padding: 0px;
 }
 .container{
-    border: 1px solid black;
+    margin: auto;
     width: 800px;
     height: 800px;
+}
+.header{
+    margin-bottom: 10px;
+    margin-left: 121px;
+    text-align: center;
+    margin-top: 20px;
+    width: 500px;
+    height: 50px;
+
+}
+.words{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    margin-left: 121px;
+    text-align: center;
+    width: 500px;
+    height: 50px;
+}
+.words p{
+    margin-top: 15px;
+}
+.generator{
+    margin-bottom: 10px;
+    margin-left: 121px;
+    text-align: center;
+    width: 500px;
+    height: 15px;
+}
+.generator button{
+    border: 1px solid black;
+    padding: 5px;
 }

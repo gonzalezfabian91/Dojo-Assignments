@@ -46,9 +46,9 @@
 .list{
     border: 1px solid lightgrey;
     width: 815px;
-    height: 200px;
+    height: 800px;
 }
-.list ul{
-    list-style-type: none;
+.list p{
+    display: block;
     margin-left: 10px;
 }
