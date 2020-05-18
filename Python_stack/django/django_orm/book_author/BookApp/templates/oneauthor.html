@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Author</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style4.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ one_author.first_name }} {{ one_author.last_name }}</h1>
+        <label class="ID" for="ID">ID:</label>
+        <p>{{ one_author.id }}</p>
+        <br>
+        <label class="notes" for="notes">Notes:</label>
+        <p>{{ one_author.notes }}</p>
+        <label class="books" for="books">Books:</label>
+        {% for books in one_author.books.all %}
+        <ul>
+            <li>{{ books.name }}</li>
+        </ul>
+        {% endfor %}
+        <form action="/add_book" method="POST">
+        {% csrf_token %}
+            <select name="book">
+                {% for books in all_books %}
+                <option value="{{books.id}}">{{ books.name }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Add">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Show</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style3.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>TV Show {{one_show.id}}</h1>
+            <a href="/shows">List of Shows</a>
+        </div>
+        <h3>Title</h3>
+            <ul>
+                <li>{{one_show.title}}</li>
+            </ul>
+        <h3>Network</h3>
+            <ul>
+                <li>{{one_show.network}}</li>
+            </ul>
+        <h3>Release Date</h3>
+            <ul>
+                <li>{{one_show.release_date}}</li>
+            </ul>
+        <h3>Description</h3>
+            <ul>
+                <li>{{one_show.description}}</li>
+            </ul>
+        <p>Last Updated: {{one_show.updated_at}}</p>
+        <a href="/shows/{{one_show.id}}/edit">Edit</a>|<a href="/shows/{{one_show.id}}/delete">Delete</a>
+    </div>
+</body>
+</html>

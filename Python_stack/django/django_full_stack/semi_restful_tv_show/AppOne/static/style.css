@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    margin: auto;
+    width: 800px;
+    min-height: 500px;
+    text-align: center;
+}
+.container h1{
+    margin-bottom: 20px;
+}
+.container table{
+    margin: auto;
+    border-collapse: collapse;
+}
+.container td,th{
+    text-align: left;
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+.container tr:nth-child(even){
+    background-color: #DDDDDD;
+}
+.row{
+    margin-top: 20px;
+}

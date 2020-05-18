@@ -14,8 +14,8 @@
             {% for user in list_of_users %}
             <tr>
                 <th>NAME</th>
-                <th>EMAIL</th>
                 <th>AGE</th>
+                <th>EMAIL</th>
             </tr>
             <tr>
                 <td>{{ user.first_name }} {{ user.last_name }}</td>
@@ -26,7 +26,7 @@
         </table>
         <hr>
         <h1>Add a User</h1>
-        <form action="/">
+        <form action="/new_user" method="POST">
             {% csrf_token %}
             <div class="form_row_one_fname">
                 <label class="fname" for="first_name">Fisrt Name:</label>
@@ -42,7 +42,7 @@
             </div>
             <div class="form_row_two_age">
                 <label class="how_old" for="age">Age:</label>
-                <input type="number" for="age">
+                <input type="number" name="age">
             </div>
             <div class="form_row_three">
                 <input type="submit" value="Submit">

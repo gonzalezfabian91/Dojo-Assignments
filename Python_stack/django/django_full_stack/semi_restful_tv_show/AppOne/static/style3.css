@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    margin: auto;
+    text-align: center;
+    width: 900px;
+    min-height: 500px;
+}
+.container li{
+    list-style: none;
+    margin-top: 8px;
+}
+.container p{
+    margin-top: 10px;
+}
+.row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

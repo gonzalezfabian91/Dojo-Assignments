@@ -5,7 +5,7 @@
 .container{
     margin: auto;
     width: 800px;
-    height: 500px;
+    min-height: 500px;
     border: 1px solid black;
 }
 .container h1{
@@ -53,4 +53,5 @@
 .form_row_three input{
     margin-top: 25px;
     margin-left: 373px;
+    margin-bottom: 20px;
 }
