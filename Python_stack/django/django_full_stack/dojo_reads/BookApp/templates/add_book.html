@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row nav justify-content-end">
+            <a href="/books">Home</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <h2 class="col-sm-8">Add a New Book Title and a Review:</h2>
+        <div class="row">
+            <form action="/books" class="col-sm-8" method="POST">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label for="title" class="col-sm-4"> Book Title:</label>
+                    <input type="text" class="col-sm-6 form-control" name="title">
+                </div>
+                <div class="form-group row">
+                    <label for="author" class="col-sm-4">Author:</label>
+                    <input type="text" name="author" class="col-sm-6">
+                </div>
+                <div class="form-group row">
+                    <label for="description" class="col-sm-4">Review:</label>
+                    <textarea name="description" class="col-sm-6" rows="4"></textarea>
+                </div>
+                <div class="form-group row">
+                    <label for="rating" class="col-sm-4">Rating:</label>
+                    <select name="rating" class="col-sm-6 form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5" selected>5</option>
+                    </select>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-4"></div>
+                    <input type="submit" class="col-sm-6 btn btn-secondary" value="Add Book and Review">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

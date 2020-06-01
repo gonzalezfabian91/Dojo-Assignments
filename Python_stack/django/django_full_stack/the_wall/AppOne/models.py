@@ -20,6 +20,15 @@ class UserManager(models.Manager):
             errors['confpw'] = "Passwords do not match."
         return errors
 
+class CommentManager(models.Manager):
+    def comment_validator(self, postData):
+        errors = {}
+
+        if len(postData['content']) == 0:
+            errors['content'] = "Cannot leave comment box empty."
+
+        return errors
+
 class User(models.Model):
     first_name = models.CharField(max_length=55)
     last_name = models.CharField(max_length=55)
@@ -32,5 +41,21 @@ class User(models.Model):
 
     objects = UserManager()
 
+class Post(models.Model):
+    content = models.CharField(max_length=500)
+    poster = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class Comment(models.Model):
+    content = models.CharField(max_length=500)
+    commentor = models.ForeignKey(User, related_name='comments', on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    objects = CommentManager()
 
 # Create your models here.
