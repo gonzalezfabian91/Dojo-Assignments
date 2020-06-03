@@ -1,0 +1,11 @@
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\bin\Debug\netcoreapp2.2\fun_1.deps.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\bin\Debug\netcoreapp2.2\fun_1.runtimeconfig.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\bin\Debug\netcoreapp2.2\fun_1.runtimeconfig.dev.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\bin\Debug\netcoreapp2.2\fun_1.dll
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\bin\Debug\netcoreapp2.2\fun_1.pdb
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\obj\Debug\netcoreapp2.2\fun_1.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\obj\Debug\netcoreapp2.2\fun_1.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\obj\Debug\netcoreapp2.2\fun_1.AssemblyInfoInputs.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\obj\Debug\netcoreapp2.2\fun_1.AssemblyInfo.cs
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\obj\Debug\netcoreapp2.2\fun_1.dll
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\fun_1\obj\Debug\netcoreapp2.2\fun_1.pdb

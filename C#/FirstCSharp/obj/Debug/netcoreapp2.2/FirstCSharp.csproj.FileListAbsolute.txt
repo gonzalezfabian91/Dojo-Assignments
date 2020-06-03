@@ -1,0 +1,11 @@
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\bin\Debug\netcoreapp2.2\FirstCSharp.deps.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\bin\Debug\netcoreapp2.2\FirstCSharp.runtimeconfig.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\bin\Debug\netcoreapp2.2\FirstCSharp.runtimeconfig.dev.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\bin\Debug\netcoreapp2.2\FirstCSharp.dll
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\bin\Debug\netcoreapp2.2\FirstCSharp.pdb
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\obj\Debug\netcoreapp2.2\FirstCSharp.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\obj\Debug\netcoreapp2.2\FirstCSharp.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\obj\Debug\netcoreapp2.2\FirstCSharp.AssemblyInfoInputs.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\obj\Debug\netcoreapp2.2\FirstCSharp.AssemblyInfo.cs
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\obj\Debug\netcoreapp2.2\FirstCSharp.dll
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\FirstCSharp\obj\Debug\netcoreapp2.2\FirstCSharp.pdb
