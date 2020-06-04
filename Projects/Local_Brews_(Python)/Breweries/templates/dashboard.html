@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Local Brews</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
+    </head>
+    <body>
+        <a href=""></a>
+        <script>
+            $(document).ready(function(){
+                
+                
+                    
+                $('#submit').click(function(){
+                    cityname = $('.city').val();
+                    console.log(cityname);
+                    $.get('https://api.openbrewerydb.org/breweries?by_city='+cityname,function(data) {
+                            console.log(data);    
+                            var arr=[]                    
+                            function updatemain(num){
+                            $.get('https://api.openbrewerydb.org/breweries/'+num,function(data) {
+                                console.log(data);
+                        
+
+                            
+                                $(".drinkinfo").html("<h3>"+data['name']+"</h3><p>"+data['street']+",</p><p>"+data['city']+", "+data['state']+", "+data['postal_code']+"</p><p>"+data['phone']+"</p><a href='"+data['website_url']+"' target='_blank'>"+data['website_url']+"</a><br><button id='"+num+"'class='review_button'>Add Reiew</button>");
+                                $('.drinkinfo button').click(function(){
+                                    $('.write_review').html('<h3>Add Review</h3><br><label for="content" class="col-sm-4">Review:</label><br><textarea name="content" class="col-sm-8 form-control" rows="4"></textarea><br><label for="review">Rating:</label><br><select name="review" class="col-sm-8 form-control"><br><option value="1">1</option><br><option value="2">2</option><br><option value="3">3</option><br><option value="4">4</option><br><option value="5" selected>5</option><br><input type="submit" value="Submit" id="review_button "class="col-sm-4 btn btn-secondary"><br><input type="hidden" name="brewery_id" value="'+num+'"></select>')
+                                })
+
+                            
+                            
+                            },"json");
+
+
+                            
+                        }
+                        
+                        
+                        for (var i = 0;i<data.length;i++){
+                                arr.push("<button id='"+data[i]['id']+"'>"+data[i]['name']+"</button><br>")
+
+                            }
+                        // function printreviews(num){
+                        //     // get reivews from localhost database
+                            // $.get("url to get reviews for selected brewery", function(res) {
+
+                        //     }) 
+                        //     for (reviews in all_Reviews){
+                        //         if (num == reviews.brewery_id){
+                        //             return reviews
+                        //         }
+
+                        //     }
+                        // }
+                        $('.suggestion').html(arr)
+                        $(".suggestion button").click(function(){
+                            $('.write_review').html('')
+                            $.get('http://localhost:8000/dashboard/api/reviews/'+($(this).attr("id")), function(data) {
+                                console.log(data);
+                                var arr2=[]
+                                for (var i = 0;i<data.length;i++){
+                                    arr2.push('<div class="reviewdiv"><p>User Review<br>"'+data[i]['content']+'"</p><p>User Rating: '+data[i]['rating']+' out of 5</p></div>')
+                                }
+                                $('.reviews').html('<h1>Reviews</h1><br>'+arr2)
+
+
+                            })
+                            
+                            // $('.reviews').html(''+printreviews($(this).attr("id"))+'')
+
+                            console.log($(this).attr("id"));
+                            updatemain($(this).attr("id"));
+                        })
+                        $(document).on("submit", "#review_form", function(e){
+                            e.preventDefault();
+                            var id =($(this).attr("id"))
+                            
+                            
+                            $.post({
+                                url: "/dashboard/create_review",
+                                data: $(this).serialize(),
+                                success: function(response){
+                                    console.log(response)
+                                    $('.write_review').html('<h1>Review Posted!</h1>')
+                                    
+                            
+                        
+                        }
+                    })
+                })
+                            
+                        
+                            
+                            
+
+                    
+                        console.log(data);
+                        },"json");
+                
+                });
+                $('#name').click(function(){
+                    bname = $('.name').val();
+                    console.log(bname);
+                    $.get('https://api.openbrewerydb.org/breweries?by_name='+bname,function(data) {
+                            console.log(data);    
+                            var arr=[]                    
+                            function updatemain(num){
+                            $.get('https://api.openbrewerydb.org/breweries/'+num,function(data) {
+                                console.log(data);
+                        
+
+                            
+                                $(".drinkinfo").html("<h3>"+data['name']+"</h3><p>"+data['street']+",</p><p>"+data['city']+", "+data['state']+", "+data['postal_code']+"</p><p>"+data['phone']+"</p><a href='"+data['website_url']+"'target='_blank'>"+data['website_url']+"</a><br><button id='"+num+"'class='review_button'>Add Reiew</button>");
+                                $('.drinkinfo button').click(function(){
+                                    $('.write_review').html('<h3>Add Review</h3><br><label for="content" class="col-sm-4">Review:</label><br><textarea name="content" class="col-sm-8 form-control" rows="4"></textarea><br><label for="review">Rating:</label><br><select name="review" class="col-sm-8 form-control"><br><option value="1">1</option><br><option value="2">2</option><br><option value="3">3</option><br><option value="4">4</option><br><option value="5" selected>5</option><br><input type="submit" value="Submit" id="review_button" class="col-sm-4 btn btn-secondary"><br><input type="hidden" name="brewery_id" value="'+num+'"></select>')
+                                })
+                            
+                            },"json");
+
+
+                            
+                        }
+                        
+                        for (var i = 0;i<data.length;i++){
+                                arr.push("<button id='"+data[i]['id']+"'>"+data[i]['name']+"</button><br>")
+
+                            }
+
+
+                            
+                        
+                        
+                            $('.suggestion').html(arr)
+                        $(".suggestion button").click(function(){
+                            $('.write_review').html('')
+                            $.get('http://localhost:8000/dashboard/api/reviews/'+($(this).attr("id")), function(data) {
+                                console.log(data);
+                                var arr2=[]
+                                for (var i = 0;i<data.length;i++){
+                                    arr2.push('<div class="reviewdiv"><p>User Review<br>"'+data[i]['content']+'"</p><p>User Rating: '+data[i]['rating']+' out of 5</p></div>')
+                                }
+                                $('.reviews').html('<h1>Reviews</h1><br>'+arr2)
+
+
+                            })
+                            
+                            // $('.reviews').html(''+printreviews($(this).attr("id"))+'')
+
+                            console.log($(this).attr("id"));
+                            updatemain($(this).attr("id"));
+                        })
+                        $(document).on("submit", "#review_form", function(e){
+                            e.preventDefault();
+                            var id =($(this).attr("id"))
+                            
+                            
+                            $.post({
+                                url: "/dashboard/create_review",
+                                data: $(this).serialize(),
+                                success: function(response){
+                                    console.log(response)
+                                    $('.write_review').html('<h1>Review Posted!</h1>')
+                                    
+                            
+                        
+                        }
+                    })
+                })
+            },"json");
+        })
+
+                // $(document).on("submit", "#review_form", function(e){
+                //     e.preventDefault();
+                //     $.post({
+                //         url: "/dashboard/create_review",
+                //         data: $(this).serialize(),
+                //         success: function(response){
+                //             console.log(response)
+                            
+                        
+                //         }
+                //     })
+                // })
+
+
+                
+                
+            
+            });
+        </script>
+        <div class="container">
+            <div class="row">
+                <div class=" col-sm-9 header">
+                    <h1>Welcome to Local Brews {{user_info.firstname}}!</h1>
+                </div>
+                <div class="col-sm-3">
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
+            <div class="maincontent">
+                <div class="drinkpic">
+                    <!-- <img class="mainpic" src="https://www.thecocktaildb.com/images/media/drink/71t8581504353095.jpg" alt="drink pic"> -->
+                </div>
+                <div class="maindrink">    
+                    <h3>Brewery Search</h3>
+                    <p>
+                        <label for="city">Search City:</label>
+                        <input class="city" type="text" placeholder="Enter City">
+                        <button id="submit">Submit</button><br>
+                        <label for="name">Search Name:</label>
+                        <input class="name" type="text" placeholder="Enter Brewery Name">
+                        <button id="name">Submit</button>
+                    </p>
+                    <div class="drinkinfo">
+                    </div>
+                    
+                </div>
+                <div class="alcohol">
+                    <h3>Search Results</h3>
+                    <div class="suggestion">
+                    </div>
+                </div>
+                <div class="reviwer row">
+                    <div class="review col-sm-5">
+                        <form action="/dashboard/create_review" id="review_form" method="POST">
+                            {%csrf_token%}
+                            <div class="write_review col-sm-12 form-group">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="reviews col-sm-5">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>

@@ -14,7 +14,7 @@ namespace Hungry_Ninja
             }
         }
 
-        public Ninja(int calories)
+        public Ninja()
         {
             calorieIntake = 0;
             calorieLimit = 1200;
@@ -23,7 +23,7 @@ namespace Hungry_Ninja
 
         public void Eat(Food item)
         {
-            if (this.IsFull)
+            if (this.IsFull == true)
             {
                 Console.WriteLine("Ninja is full");
             }

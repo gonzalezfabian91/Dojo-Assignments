@@ -7,8 +7,8 @@ namespace Hungry_Ninja
         static void Main(string[] args)
         {
             Buffet World = new Buffet();
-            Ninja Fabian = new Ninja(12);
-            while(!Fabian.IsFull)
+            Ninja Fabian = new Ninja();
+            while(Fabian.IsFull == false)
             {
                 Fabian.Eat(World.Serve());
             }

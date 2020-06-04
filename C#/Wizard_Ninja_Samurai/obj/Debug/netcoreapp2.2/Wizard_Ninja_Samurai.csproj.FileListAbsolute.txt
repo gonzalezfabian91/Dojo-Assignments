@@ -1,0 +1,11 @@
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\bin\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.deps.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\bin\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.runtimeconfig.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\bin\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.runtimeconfig.dev.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\bin\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.dll
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\bin\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.pdb
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.AssemblyInfoInputs.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.AssemblyInfo.cs
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.dll
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\Wizard_Ninja_Samurai\obj\Debug\netcoreapp2.2\Wizard_Ninja_Samurai.pdb

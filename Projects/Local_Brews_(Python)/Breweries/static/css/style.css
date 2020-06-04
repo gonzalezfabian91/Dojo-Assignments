@@ -1,0 +1,183 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    }
+    
+
+    .header h1{
+        display: inline-block;
+        margin: 10px;
+        color: #FFB80E;
+        text-shadow: 3px 2px rgb(2, 2, 2);
+    }
+
+
+    .header h3{
+        display: inline-block;
+        margin: 10px;
+        text-align: right;
+        font-weight: bolder;
+        font-size: x-large;
+    }
+    .container{
+        background-image: url("https://cdn5.vectorstock.com/i/1000x1000/19/79/cartoon-image-of-beer-in-glass-vector-14241979.jpg");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    .maincontent{
+        margin-bottom: 1px;
+        
+    }
+    .drinkpic{
+        display: inline-block;
+        vertical-align: top;
+    }
+    .alcohol button{
+        background-color: #F9A51E;
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+    }
+    
+    .drinkpic img{
+        border: 3px solid #C0C0C0;
+        width: 400px;
+        height: 250px;
+        vertical-align: top;
+        margin: 20px;
+        
+    }
+    
+    .maindrink{
+        display: inline-block;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        /* width: 475px; */
+        background-color: rgba(29, 29, 29, 0.5);
+    }
+        
+    
+    .maindrink h3{
+        text-shadow: -1px 1px 2px #000,
+                1px 1px 2px #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+        color: white;
+        font-size: x-large;
+        margin-top: 20px;
+    }
+    .maindrink p{
+        color: white;
+        width: 465px;
+        font-size: large;
+        text-shadow: -1px 1px 2px #000,
+				1px 1px 2px #000,
+				1px -1px 0 #000,
+				-1px -1px 0 #000;
+        /* background-image: linear-gradient(to right, white,#DBCCDA);
+        margin: 0px;
+        width: 465px;
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 10px; */
+    }
+    .alcohol{
+        display: inline-block;
+        margin: 20px;
+        background-color: rgba(36, 36, 36, 0.5);
+        vertical-align: top;
+    }
+    #searchbar {
+        color: white;
+        font-size: large;
+        text-shadow: -1px 1px 2px #000,
+				1px 1px 2px #000,
+				1px -1px 0 #000,
+                -1px -1px 0 #000;
+    }
+    .suggestion p{
+        display: inline-block;
+        text-shadow: -1px 1px 2px #000,
+				1px 1px 2px #000,
+				1px -1px 0 #000,
+                -1px -1px 0 #000;
+        color: white;
+        margin: 3px;
+
+    }
+    .suggestion{
+        width: 400px;
+        height: 350px;
+        overflow: scroll;
+    }
+    .suggestion h3{
+        text-shadow: -1px 1px 2px #000,
+				1px 1px 2px #000,
+				1px -1px 0 #000,
+                -1px -1px 0 #000;
+        color: white;
+        font-size: x-large;
+        margin-top: 20px;
+    }
+    .alcohol h3{
+        text-shadow: -1px 1px 2px #000,
+				1px 1px 2px #000,
+				1px -1px 0 #000,
+                -1px -1px 0 #000;
+        color: white;
+        margin-top: 5px;
+        margin-bottom: 20px;
+
+    }
+    .review{
+        margin: 20px;
+        background-color: rgba(29, 29, 29, 0.5);
+        padding-left: 40px;
+        display: inline-block;
+
+    }
+    .review h3{
+        text-shadow: -1px 1px 2px #000,
+				1px 1px 2px #000,
+				1px -1px 0 #000,
+                -1px -1px 0 #000;
+        color: white;
+        font-size: x-large;
+        margin-top: 20px;
+    }
+    .drinkinfo a{
+        background-color: #F7991D;
+        color: black;
+    }
+    .reviews{
+        text-shadow: -1px 1px 2px #000,
+				1px 1px 2px #000,
+				1px -1px 0 #000,
+                -1px -1px 0 #000;
+        background-color: rgba(36, 36, 36, 0.5);
+        width: 400px;
+        height: 300px;
+        margin-left: 20px;
+        overflow: scroll;
+    }
+    .reviewdiv{
+        border-radius: 10px;
+        border: solid black 2px;
+        color: white;
+        height: 100px;
+        overflow: hidden;
+    }
+    .write_review{
+        display: inline-block;
+
+    }
+
+
+
+
+}
