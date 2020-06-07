@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid gold; */
+}
+
+.td{
+    border: 5px solid black;
+    text-align: center;
+    width: 500px;
+    height: 200px;
+    margin-top: 50px;
+    margin-left: 380px;
+}
+
+.container h1{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.container{
+    text-align: center;
+}
+
+.td p{
+    font-weight: bolder;
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}

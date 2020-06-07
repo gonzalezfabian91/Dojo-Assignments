@@ -1,0 +1,14 @@
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\obj\Debug\netcoreapp2.2\Portfolio1.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\obj\Debug\netcoreapp2.2\Portfolio1.csproj.CoreCompileInputs.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\obj\Debug\netcoreapp2.2\Portfolio1.RazorAssemblyInfo.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\obj\Debug\netcoreapp2.2\Portfolio1.RazorAssemblyInfo.cs
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\obj\Debug\netcoreapp2.2\Portfolio1.AssemblyInfoInputs.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\obj\Debug\netcoreapp2.2\Portfolio1.AssemblyInfo.cs
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\bin\Debug\netcoreapp2.2\Portfolio1.deps.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\bin\Debug\netcoreapp2.2\Portfolio1.runtimeconfig.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\bin\Debug\netcoreapp2.2\Portfolio1.runtimeconfig.dev.json
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\bin\Debug\netcoreapp2.2\Portfolio1.dll
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\bin\Debug\netcoreapp2.2\Portfolio1.pdb
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\obj\Debug\netcoreapp2.2\Portfolio1.RazorTargetAssemblyInfo.cache
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\obj\Debug\netcoreapp2.2\Portfolio1.dll
+C:\Users\Fabian\Desktop\Dojo_assignments\C#\ASP.NET\Portfolio1\obj\Debug\netcoreapp2.2\Portfolio1.pdb
