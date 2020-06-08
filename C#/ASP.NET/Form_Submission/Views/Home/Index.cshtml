@@ -1,0 +1,48 @@
+﻿@model User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Enter your Information</h1>
+            <form asp-action="Register" asp-controller="Home" method="POST">
+                <div class="row">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                    <label asp-for="FirstName" class="col-4"></label>
+                    <input asp-for="FirstName" class="col-6 form-control">
+                </div>
+                <div class="row">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                    <label asp-for="LastName" class="col-4"></label>
+                    <input asp-for="LastName" class="col-6 form-control">
+                </div>
+                <div class="row">
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                    <label asp-for="Age" class="col-4"></label>
+                    <input asp-for="Age" class="col-6 form-control">
+                </div>
+                <div class="row">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <label asp-for="Email" class="col-4"></label>
+                    <input asp-for="Email" class="col-6 form-control">
+                </div>
+                <div class="row">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                    <label asp-for="Password" class="col-4"></label>
+                    <input asp-for="Password" type="password" class="col-6 form-control">
+                </div>
+                <div class="row">
+                    <input type="submit" class="btn btn-secondary">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

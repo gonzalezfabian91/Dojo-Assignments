@@ -1,0 +1,50 @@
+﻿@model Survey
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row form border mt-5 p-3">
+            <form class="form" action="/info" method="POST">
+                <div class="row name">
+                    <label for="name" class="col-sm-6">Your Name:</label>
+                    <input type="text" name="name" class="col-sm-6 form-control">
+                </div>
+                <div class="row local">
+                    <label for="location" class="col-sm-6">Dojo Location:</label>
+                    <select name="location" class="col-sm-6 form-control">
+                        <option value="OC">OC</option>
+                        <option value="Burbank">Burbank</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Oakland">Oakland</option>
+                        <option value="San Jose">San Jose</option>
+                        <option value="Boise">Boise</option>
+                    </select>
+                </div>
+                <div class="row lang">
+                    <label for="language" class="col-sm-6">Favorite Language:</label>
+                    <select name="language" class="col-sm-6 form-control">
+                        <option value="C#">C#</option>
+                        <option value="Python">Python</option>
+                        <option value="Mern">Mern</option>
+                        <option value="Java">Java</option>
+                    </select>
+                </div>
+                <div class="message">
+                    <label for="message">Comment(Optional):</label>
+                    <textarea name="message" class="col-sm-12 form-control" rows="4"></textarea>
+                </div>
+                <div class="row btn">
+                    <input type="submit" class="btn btn-secondary">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
