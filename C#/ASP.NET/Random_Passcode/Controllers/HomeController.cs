@@ -36,23 +36,23 @@ namespace Random_Passcode.Controllers
             return passcode;
         }
 
-        public int? IncrementCount
-        {
-            get
-            {
-                return HttpContext.Session.GetInt32("count");
-            }
-            set 
-            {
-                HttpContext.Session.SetInt32("count", 1);
-            }
-        }
+        // public int? IncrementCount
+        // {
+        //     get
+        //     {
+        //         return HttpContext.Session.GetInt32("count");
+        //     }
+        //     set 
+        //     {
+        //         HttpContext.Session.SetInt32("count", 1);
+        //     }
+        // }
 
-        public int Count(int count)
-        {
-            count ++;
-            return count;
-        }
+        // public int Count(int count)
+        // {
+        //     count ++;
+        //     return count;
+        // }
 
         // [HttpPost("")]
         public IActionResult Index()
@@ -60,7 +60,7 @@ namespace Random_Passcode.Controllers
             int? count = HttpContext.Session.GetInt32("count");
             if (count == null)
             {
-                HttpContext.Session.SetInt32("count", 0);
+                HttpContext.Session.SetInt32("count", 1);
             }
             else
             {
