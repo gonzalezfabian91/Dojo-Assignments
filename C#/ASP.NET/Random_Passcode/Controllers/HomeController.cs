@@ -2,37 +2,82 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Random_Passcode.Models;
-using Random_Passcode;
 
 namespace Random_Passcode.Controllers
 {
     public class HomeController : Controller
     {
-        [HttpGet("")]
+
+        private string GeneratePass
+        {
+            get
+            {
+                return HttpContext.Session.GetString("passcode");
+            }
+            set
+            {
+                HttpContext.Session.SetString("passcode", value);
+            }
+        }
+
+        public string Passcode()
+        {
+            string valid = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            string passcode = "";
+            Random random = new Random();
+            for(var i = 0; i <= 14; i++)
+            {
+                passcode += valid[random.Next(valid.Length)];
+            }
+            return passcode;
+        }
+
+        public int? IncrementCount
+        {
+            get
+            {
+                return HttpContext.Session.GetInt32("count");
+            }
+            set 
+            {
+                HttpContext.Session.SetInt32("count", 1);
+            }
+        }
+
+        public int Count(int count)
+        {
+            count ++;
+            return count;
+        }
+
+        // [HttpPost("")]
         public IActionResult Index()
         {
-            string password = Random_Passcode.Models.PasscodeGenerator.RandomPassword(14);
-            HttpContext.Session.SetInt32("Count", 1);
-            ViewBag.Password = password;
-            ViewBag.Count = HttpContext.Session.GetInt32("Count");
+            int? count = HttpContext.Session.GetInt32("count");
+            if (count == null)
+            {
+                HttpContext.Session.SetInt32("count", 0);
+            }
+            else
+            {
+                HttpContext.Session.SetInt32("count",(int)count + 1);
+            }
+            ViewBag.Passcode = GeneratePass;
+            ViewBag.Count = count;
             return View("Index");
         }
 
-        [HttpGet("generate")]
-        public IActionResult Generate()
+        [HttpPost("")]
+        public IActionResult RandPasscode()
         {
-            int Count = (int)HttpContext.Session.GetInt32("Count") + 1;
-            HttpContext.Session.SetInt32("Count", 1);
-            string password = Random_Passcode.Models.PasscodeGenerator.RandomPassword(14);
-            ViewBag.Password = password;
-            ViewBag.Count = HttpContext.Session.GetInt32("Count") + 1;
-            return View("Index");
+            GeneratePass = Passcode();
+            return RedirectToAction("Index");
         }
+
         public IActionResult Privacy()
         {
             return View();

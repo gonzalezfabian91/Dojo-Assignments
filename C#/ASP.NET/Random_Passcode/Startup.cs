@@ -23,7 +23,6 @@ namespace Random_Passcode
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddSession();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -42,6 +41,8 @@ namespace Random_Passcode
 
             app.UseStaticFiles();
             app.UseSession();
+            app.UseMvc();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
