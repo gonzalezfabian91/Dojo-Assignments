@@ -1,0 +1,36 @@
+@model Dojo
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VICTORY!!!!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                Fullness : @Model.Fullness
+            </div>
+            <div class="col-3">
+                Happiness : @Model.Happiness
+            </div>
+            <div class="col-3">
+                Meals : @Model.Meals
+            </div>
+            <div class="col-3">
+                Energy : @Model.Energy
+            </div>
+        </div>
+        <div class="info border text-center">
+            <img src="@Model.Image" alt="">
+            <p>@Model.Message</p>
+        </div>
+        <div class="text-center">
+            <a href="/reset" class="btn btn-secondary">Reset</a>
+        </div>
+    </div>
+</body>
+</html>
