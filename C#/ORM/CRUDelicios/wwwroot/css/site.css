@@ -18,6 +18,10 @@ html {
   }
 }
 
+.header h1{
+    margin-left: 50px;
+}
+
 .border-top {
   border-top: 1px solid #e5e5e5;
 }

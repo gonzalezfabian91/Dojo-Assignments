@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CRUDelicios.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -23,14 +25,16 @@ namespace CRUDelicios
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
+            // services.Configure<CookiePolicyOptions>(options =>
+            // {
+            //     // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+            //     options.CheckConsentNeeded = context => true;
+            //     options.MinimumSameSitePolicy = SameSiteMode.None;
+            // });
 
-
+            services.AddDbContext<CRUDeliciousContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+            services.AddSession();
+            services.AddHttpContextAccessor();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -47,7 +51,8 @@ namespace CRUDelicios
             }
 
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+            // app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

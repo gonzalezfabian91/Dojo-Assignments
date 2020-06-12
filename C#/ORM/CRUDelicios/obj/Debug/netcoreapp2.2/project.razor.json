@@ -2961,6 +2961,16 @@
   "RootNamespace": "CRUDelicios",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\CRUDelicios\\Views\\Home\\Dish.cshtml",
+      "TargetPath": "Views\\Home\\Dish.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\CRUDelicios\\Views\\Home\\Edit.cshtml",
+      "TargetPath": "Views\\Home\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\CRUDelicios\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -2973,6 +2983,11 @@
     {
       "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\CRUDelicios\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\CRUDelicios\\Views\\Home\\Create.cshtml",
+      "TargetPath": "Views\\Home\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
