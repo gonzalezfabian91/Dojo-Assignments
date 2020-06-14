@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\login_registration.csproj",
+  "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/login_registration.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2961,58 +2961,58 @@
   "RootNamespace": "login_registration",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\User\\Success.cshtml",
-      "TargetPath": "Views\\User\\Success.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\Shared\\_CookieConsentPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\User\\Register.cshtml",
-      "TargetPath": "Views\\User\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\User\\Login.cshtml",
-      "TargetPath": "Views\\User\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\login_registration\\Views\\Home\\Privacy.cshtml",
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/Shared/Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/User/Success.cshtml",
+      "TargetPath": "Views\\User\\Success.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/Home/Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/Shared/_CookieConsentPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/User/Login.cshtml",
+      "TargetPath": "Views\\User\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/User/Register.cshtml",
+      "TargetPath": "Views\\User\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/login_registration/Views/Shared/_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     }
   ],

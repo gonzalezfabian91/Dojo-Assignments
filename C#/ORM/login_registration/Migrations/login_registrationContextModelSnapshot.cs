@@ -36,9 +36,6 @@ namespace login_registration.Migrations
                     b.Property<string>("Password")
                         .IsRequired();
 
-                    b.Property<string>("PasswordConfirm")
-                        .IsRequired();
-
                     b.Property<DateTime>("UpdatedAt");
 
                     b.HasKey("UserId");
