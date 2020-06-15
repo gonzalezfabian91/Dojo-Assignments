@@ -1,0 +1,41 @@
+@model Chef
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Chef</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="header text-center">
+            <h2>Add a Chef!</h2>
+        </div>
+        <div class="home text-left">
+            <a href="/">Home</a>
+        </div>
+        <form asp-action="CreateChef" asp-controller="Home" method="POST" class="form">
+            <div class="form-group">
+                <label asp-for="FirstName" class="col-4"></label>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <input asp-for="FirstName" class="from-control col-6">
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="col-4"></label>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+                <input asp-for="LastName" class="from-control col-6">
+            </div>
+            <div class="form-group">
+                <label asp-for="Birthday" class="col-4"></label>
+                <span asp-validation-for="Birthday" class="text-danger"></span>
+                <input asp-for="Birthday" class="from-control col-6">
+            </div>
+            <div class="button">
+                <input type="submit" class="btn btn-secondary" value="Add Chef">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

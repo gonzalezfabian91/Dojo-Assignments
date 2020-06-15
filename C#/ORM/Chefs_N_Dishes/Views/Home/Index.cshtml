@@ -1,0 +1,54 @@
+﻿@model List<Chef>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="text-right">
+            <a href="/new">Add a Chef</a>
+        </div>
+        <div class="row text-center">
+            <h3>Chefs | <a href="/dishes">Dishes</a></h3>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <h4 class="border-bottom pb-3">Check out these Chefs</h4>
+                <div class="list mt-3">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Number of Dishes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Chef item in Model)
+                            {
+                                <tr>
+                                    <th>@item.FirstName @item.LastName</th>
+                                    <th>@{int age = DateTime.Now.Year - item.Birthday.Year;}@age</th>
+                                    @{
+                                        int returnStatement = 0;
+                                        if (item.CreatedDishes != null)
+                                        {
+                                            returnStatement = item.CreatedDishes.Count();
+                                        }
+                                    }
+                                    <th>@returnStatement</th>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
