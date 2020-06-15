@@ -18,9 +18,10 @@ namespace Chefs_N_Dishes.Models
         public string LastName {get;set;}
 
         [Required]
+        [DataType(DataType.Date)]
         [Display(Name = "Date of Birth")]
         public DateTime Birthday {get;set;}
 
-        public List<Dishes> CreatedDishes {get;set;}
+        public List<Dishes> CreatedDishes {get;set;} = null;
     }
 }

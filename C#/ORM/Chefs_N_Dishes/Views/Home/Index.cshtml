@@ -1,4 +1,4 @@
-﻿@model List<Chef>
+﻿@model ViewModel
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,19 +29,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (Chef item in Model)
+                            @foreach (var item in Model.AllChefs)
                             {
+                                var year = DateTime.Today.Year;
+                                var age = year - item.Birthday.Year;
                                 <tr>
-                                    <th>@item.FirstName @item.LastName</th>
-                                    <th>@{int age = DateTime.Now.Year - item.Birthday.Year;}@age</th>
-                                    @{
-                                        int returnStatement = 0;
-                                        if (item.CreatedDishes != null)
-                                        {
-                                            returnStatement = item.CreatedDishes.Count();
-                                        }
-                                    }
-                                    <th>@returnStatement</th>
+                                    <td>@item.FirstName @item.LastName</td>
+                                    <td>@age</td>
+                                    <td>@item.CreatedDishes.Count</td>
                                 </tr>
                             }
                         </tbody>

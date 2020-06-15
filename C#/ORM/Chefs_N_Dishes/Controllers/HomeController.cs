@@ -20,8 +20,10 @@ namespace Chefs_N_Dishes.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            List<Chef> chefs = db.Chefs.ToList();
-            return View("Index", chefs);
+            ViewModel allchefs = new ViewModel();
+            allchefs.AllChefs = db.Chefs.Include(u => u.CreatedDishes).ToList();
+            // List<Chef> chefs = db.Chefs.ToList();
+            return View("Index", allchefs);
         }
 
         [HttpGet("new")]
@@ -55,27 +57,23 @@ namespace Chefs_N_Dishes.Controllers
         [HttpGet("new/dish")]
         public IActionResult NewDish()
         {
-            IndexViewModel allchefs = new IndexViewModel();
+            ViewModel allchefs = new ViewModel();
             allchefs.AllChefs = db.Chefs.ToList();
             return View("NewDish", allchefs);
         }
 
         [HttpPost("create/dish")]
-        public IActionResult CreateDish(Dishes newDish)
+        public IActionResult CreateDish(ViewModel newDish)
         {
-            IndexViewModel allchefs = new IndexViewModel();
-            allchefs.AllChefs = db.Chefs.ToList();
-
             if (ModelState.IsValid)
             {
-                db.Add(newDish);
+                db.Add(newDish.Dish);
                 db.SaveChanges();
-                return RedirectToAction("Dishes", newDish);
-            }
-            else
-            {
                 return RedirectToAction("Dishes");
             }
+            ViewModel allchefs = new ViewModel();
+            allchefs.AllChefs = db.Chefs.ToList();
+            return View("Dishes", allchefs);
         }
 
         public IActionResult Privacy()
