@@ -164,173 +164,186 @@ class SList {
         return this.containsRecursive(val, current.next);
     }
 
-  // Time: O(n) linear, n = length of list
-  // Space: O(1) constant
-  removeBack() {
-    let removedData = null;
+// Time: O(n) linear, n = length of list
+// Space: O(1) constant
+    removeBack() {
+        let removedData = null;
 
-    if (!this.isEmpty()) {
-      if (this.head.next === null) {
-        // head only node
-        removedData = this.head.data;
-        this.head = null; // remove it from list
-      } else {
-        let runner = this.head;
-        // right of && will only be checked if left is true
-        while (runner.next && runner.next.next) {
-          runner = runner.next;
+        if (!this.isEmpty()) {
+            if (this.head.next === null) {
+                // head only node
+                removedData = this.head.data;
+                this.head = null; // remove it from list
+            } else {
+                let runner = this.head;
+                // right of && will only be checked if left is true
+                while (runner.next && runner.next.next) {
+                    runner = runner.next;
+                }
+
+                // after while loop finishes, runner is now at 2nd to last node
+                removedData = runner.next.data;
+                runner.next = null; // remove it from list
         }
-
-        // after while loop finishes, runner is now at 2nd to last node
-        removedData = runner.next.data;
-        runner.next = null; // remove it from list
-      }
     }
     return removedData;
-  }
-
-  // Time: O(n) linear, n = list length. Val could be last node
-  // Space: O(1) constant
-  removeVal(val) {
-    if (this.isEmpty()) {
-      return false;
-    }
-
-    if (this.head.data === val) {
-      this.head = this.head.next;
-      return true;
-    }
-
-    let runner = this.head.next;
-
-    while (runner.next && runner.next.data !== val) {
-      runner = runner.next;
-    }
-
-    if (runner.next && runner.next.data === val) {
-      runner.next = runner.next.next;
-      return true;
-    }
-    return false;
-  }
-
-  // getMinMode() {
-  //   let runner = this.head;
-  //   let minNode = this.head;
-
-  //   while (runner) {
-  //     if (runner.data < minNode.data) {
-  //       minNode = runner;
-  //     }
-  //     runner = runner.next;
-  //   }
-  //   return minNode;
-  // }
-
-  // Time: O(2n) -> O(n) linear, n = list length
-  // Space: O(1) constant
-  moveMinToFront() {
-    if (this.isEmpty()) {
-      return this;
-    }
-
-    let minNode = this.head;
-    let prev = this.head;
-    let runner = this.head;
-
-    while (runner) {
-      if (runner.data < minNode.data) {
-        minNode = runner;
-      }
-      runner = runner.next;
-    }
-
-    if (this.head === minNode) {
-      return this;
-    }
-
-    runner = this.head;
-
-    while (runner !== minNode) {
-      prev = runner;
-      runner = runner.next;
-    }
-
-    prev.next = minNode.next;
-    minNode.next = this.head;
-    this.head = minNode;
-    return this;
-  }
-
-  // Time: O(n) linear, n = list length
-  // Space: O(n)
-  // This avoids the extra loop in the above sln
-  moveMinFront() {
-    if (this.isEmpty()) {
-      return this;
-    }
-
-    let minNode = this.head;
-    let runner = this.head;
-    let prev = this.head;
-
-    while (runner) {
-      if (runner.data < minNode.data) {
-        minNode = runner;
-      }
-
-      // make sure the prev stays the prev of minNode
-      // if minNode is last node, we don't want prev to become the runner
-      if (prev.next !== minNode && runner.next !== null) {
-        prev = runner;
-      }
-      runner = runner.next;
-    }
-
-    if (minNode === this.head) {
-      return this;
-    }
-
-    prev.next = minNode.next;
-    minNode.next = this.head;
-    this.head = minNode;
-    return this;
-  }
-
-  // Time: O(n - 1) n = list length -> O(n) linear
-  // Space: O(1) constant
-  secondToLast() {
-    if (!this.head || !this.head.next) {
-      return null;
-    }
-
-    let runner = this.head;
-
-    while (runner.next && runner.next.next) {
-      runner = runner.next;
-    }
-    return runner.data;
-  }
-
-  // Time: O(n) n = "this" list length -> O(n) linear. addList does not need to be looped
-  // Space: O(1) constant, although this list grows by addList's length, our algo does not need to take up additional space to do it's job
-  concat(addList) {
-    let runner = this.head;
-
-    if (runner === null) {
-      this.head = addList.head;
-    } else {
-      while (runner.next) {
-        runner = runner.next;
-      }
-      runner.next = addList.head;
-    }
-    return this;
-  }
 }
 
+// Time: O(n) linear, n = list length. Val could be last node
+// Space: O(1) constant
+    removeVal(val) {
+        if (this.isEmpty()) {
+            return false;
+        }
+
+        if (this.head.data === val) {
+            this.head = this.head.next;
+            return true;
+        }
+
+        let runner = this.head.next;
+
+        while (runner.next && runner.next.data !== val) {
+            runner = runner.next;
+        }
+
+        if (runner.next && runner.next.data === val) {
+            runner.next = runner.next.next;
+            return true;
+        }
+        return false;
+    }
+
+// getMinMode() {
+//   let runner = this.head;
+//   let minNode = this.head;
+//   while (runner) {
+//     if (runner.data < minNode.data) {
+//       minNode = runner;
+//     }
+//     runner = runner.next;
+//   }
+//   return minNode;
+// }
+// Time: O(2n) -> O(n) linear, n = list length
+// Space: O(1) constant
+    moveMinToFront() {
+        if (this.isEmpty()) {
+            return this;
+        }
+
+        let minNode = this.head;
+        let prev = this.head;
+        let runner = this.head;
+
+        while (runner) {
+            if (runner.data < minNode.data) {
+                minNode = runner;
+            }
+            runner = runner.next;
+        }
+
+        if (this.head === minNode) {
+            return this;
+        }
+
+        runner = this.head;
+
+        while (runner !== minNode) {
+            prev = runner;
+            runner = runner.next;
+        }
+
+        prev.next = minNode.next;
+        minNode.next = this.head;
+        this.head = minNode;
+        return this;
+    }
+
+// Time: O(n) linear, n = list length
+// Space: O(n)
+// This avoids the extra loop in the above sln
+    moveMinFront() {
+        if (this.isEmpty()) {
+            return this;
+        }
+
+        let minNode = this.head;
+        let runner = this.head;
+        let prev = this.head;
+
+        while (runner) {
+            if (runner.data < minNode.data) {
+                minNode = runner;
+        }
+
+            // make sure the prev stays the prev of minNode
+            // if minNode is last node, we don't want prev to become the runner
+            if (prev.next !== minNode && runner.next !== null) {
+                prev = runner;
+            }
+            runner = runner.next;
+        }
+
+        if (minNode === this.head) {
+            return this;
+        }
+
+        prev.next = minNode.next;
+        minNode.next = this.head;
+        this.head = minNode;
+        return this;
+    }
+
+// Time: O(n - 1) n = list length -> O(n) linear
+// Space: O(1) constant
+    secondToLast() {
+        if (!this.head || !this.head.next) {
+            return null;
+        }
+
+        let runner = this.head;
+
+        while (runner.next && runner.next.next) {
+            runner = runner.next;
+        }
+        return runner.data;
+    }
+
+// Time: O(n) n = "this" list length -> O(n) linear. addList does not need to be looped
+// Space: O(1) constant, although this list grows by addList's length, our algo does not need to take up additional space to do it's job
+    concat(addList) {
+        let runner = this.head;
+
+        if (runner === null) {
+            this.head = addList.head;
+        } else {
+            while (runner.next) {
+                runner = runner.next;
+            }
+            runner.next = addList.head;
+        }
+        return this;
+    }
+}
+// Time: O(n) linear, n = list length
+// Space: O(1) constant
+    recursiveLast(runner = this.head){
+        if (runner ===  null) {
+            return null;
+        }
+        if (runner.next === null){
+            return runner.data;
+        }
+        return this.recursiveLast(runner.next);
+    }
+
+
+
+
+
 SList.prototype.someNewMethod = function () {
-  console.log("This method was added to the class from outside the class");
+    console.log("This method was added to the class from outside the class");
 };
 
 const linkedList = new SList();
