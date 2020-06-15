@@ -9,8 +9,8 @@ using login_registration.Models;
 namespace login_registration.Migrations
 {
     [DbContext(typeof(login_registrationContext))]
-    [Migration("20200614044146_migration1")]
-    partial class migration1
+    [Migration("20200614204827_migrate1")]
+    partial class migrate1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,9 +36,6 @@ namespace login_registration.Migrations
                         .IsRequired();
 
                     b.Property<string>("Password")
-                        .IsRequired();
-
-                    b.Property<string>("PasswordConfirm")
                         .IsRequired();
 
                     b.Property<DateTime>("UpdatedAt");
