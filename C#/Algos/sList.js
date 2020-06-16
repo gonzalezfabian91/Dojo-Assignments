@@ -32,6 +32,16 @@ Week 1
         - list1.concat(list2) should result in list1 having nodes with data in this order: 1, 2, 3, 4, 5, 6
     3. Bonus: splitOnVal
         - splitOnVal(5) for the list (1=>3=>5=>2=>4) will change list to (1=>3), and the return value will be a new list containing (5=>2=>4)
+
+Week 3:
+    1. Mon
+        - recursiveLast: recursively return the value / data of the last node
+        - reverse
+        - reverse an sList in place (do not create a new sList)
+    2. Tue
+        - hasLoop
+            - return whether or not the linked list connects back to itself. If it connects to itself, what does that mean will happen when you loop through it?
+        - recursiveMax
 */
 
 class Node {
@@ -325,7 +335,7 @@ class SList {
         }
         return this;
     }
-}
+
 // Time: O(n) linear, n = list length
 // Space: O(1) constant
     recursiveLast(runner = this.head){
@@ -337,6 +347,43 @@ class SList {
         }
         return this.recursiveLast(runner.next);
     }
+    
+    reverse2() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        let runner = this.head;
+        // console.log('before while');
+        while (runner.next) {
+            // console.log('in while');
+            if (runner.next.next == null) {
+                let head = this.insertAtFront(runner.next.data);
+                // console.log('in if statement');
+                this.head = head;
+                runner.next = runner.next.next;
+                // this.display();
+                break;
+            }
+            this.insertAtFront(runner.next.data);
+            runner.next = runner.next.next;
+            // this.display();
+        }
+        return;
+    }
+    
+    recursiveMax(runner = this.head, maxNode = this.head) {
+        if (this.isEmpty()) {
+            return null;
+        }
+        if(runner == null) {
+            return maxNode.data;
+        }
+        if (runner.data > maxNode.data) {
+            maxNode = runner;
+        }
+        return this.recursiveMax(runner.next, maxNode);
+    }
+}
 
 
 
