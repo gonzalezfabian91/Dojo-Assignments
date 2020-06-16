@@ -1,0 +1,59 @@
+@model BAViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-8">Welcome, @Model.CurrentUser.FirstName</h1>
+            <p class="col-3">Current Balance: $@Model.CurrentUser.Balance</p>
+            <a href="/logout">Logout</a>
+        </div>
+        <form asp-action="Maketrans" asp-controller="Home" method="POST">
+            <div class="trans">
+                <div class="col-5">
+                    <div class="form-group">
+                        <label asp-for="Transaction.Amount"></label>
+                        <span asp-validation-for="Transaction.Amount" class="text-danger"></span>
+                        <input asp-for="Transaction.Amount" class=" form-control col-6">
+                    </div>
+                    <div class="button">
+                        <input type="submit" class="btn btn-secondary" value="Submit">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Transaction tran in Model.AllUserTransaction)
+                {
+                    <tr>
+                        @{
+                            if (tran.Amount < 0)
+                            {
+                                <td>-$@{double newAmount = tran.Amount*-1;}@newAmount</td>
+                            }
+                            else
+                            {
+                                <td>$@tran.Amount</td>
+                            }
+                        }
+                        <td>@tran.CreatedAt</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
