@@ -1,0 +1,44 @@
+@model OneProductViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneProduct</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">@Model.Product.Name</h1>
+    </div>
+    <div class="row">
+        <div class="left col-6">
+            <h2 class="text-center">Categories:</h2>
+            <ul>
+                @foreach (Associations category in Model.Product.Categories)
+                {
+                    <li>@category.Category.Name</li>
+                }
+            </ul>
+        </div>
+        <div class="right col-6">
+            <h2 class="text-center">Add Category:</h2>
+            <form asp-action="AddCategory" asp-controller="Home" asp-route-productId="@Model.Product.ProductId">
+                <div class="form-group">
+
+                    @* <label asp-for="CategoryIdToAdd" class="col-4"></label> *@
+                    <select asp-for="CategoryIdToAdd" class="form-control col-6">
+                        @foreach (Categories category in Model.AllCategoriesForProduct)
+                        {
+                            <option value="@category.CategoryId">@category.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn btn-secondary" value="Add">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
