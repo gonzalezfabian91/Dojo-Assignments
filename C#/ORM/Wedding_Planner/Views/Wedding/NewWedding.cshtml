@@ -1,0 +1,50 @@
+@model Wedding
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Wedding</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="lefthead col-8">
+                <h1>Plan Your Wedding</h1>
+            </div>
+            <div class="dash col-2">
+                <a href="/dashboard">Dashboard</a>
+            </div>
+            <div class="log col-2">
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        <form asp-action="CreateNewWedding" asp-controller="Wedding" method="POST">
+            <div class="form-group">
+                <label asp-for="Bride" class="col-4"></label>
+                <span asp-validation-for="Bride" class="text-danger"></span>
+                <input asp-for="Bride" class="form-control col-6">
+            </div>
+            <div class="form-group">
+                <label asp-for="Groom" class="col-4"></label>
+                <span asp-validation-for="Groom" class="text-danger"></span>
+                <input asp-for="Groom" class="form-control col-6">
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="col-4"></label>
+                <span asp-validation-for="Date" class="text-danger"></span>
+                <input asp-for="Date" class="form-control col-6">
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="col-4"></label>
+                <span asp-validation-for="Address" class="text-danger"></span>
+                <input asp-for="Address" class="form-control col-6">
+            </div>
+            <div class="button">
+                <input type="submit" class="btn btn-secondary" value="Create">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

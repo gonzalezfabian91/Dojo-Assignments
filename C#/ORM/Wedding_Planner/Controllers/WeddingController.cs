@@ -31,12 +31,39 @@ namespace Wedding_Planner.Controllers
         [HttpGet("dashboard")]
         public IActionResult Dashboard()
         {
-            if (isLoggedIn == false)
+            if (!isLoggedIn)
             {
                 return RedirectToAction("Index", "Home");
             }
             
             return View("Dashboard");
+        }
+
+        [HttpGet("new_wedding")]
+        public IActionResult NewWedding()
+        {
+            if (!isLoggedIn)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View("NewWedding");
+        }
+
+        [HttpPost("new_wedding/create")]
+        public IActionResult CreateNewWedding(Wedding new_wedding)
+        {
+            if (!isLoggedIn)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            if (ModelState.IsValid)
+            {
+                db.Add(new_wedding);
+                db.SaveChanges();
+                return RedirectToAction("Dashboard", new_wedding);
+            }
+            return View("NewWedding");
         }
     }
 }

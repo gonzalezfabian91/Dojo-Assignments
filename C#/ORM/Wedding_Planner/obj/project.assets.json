@@ -12149,23 +12149,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Fabian\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/fabian/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\Wedding_Planner\\Wedding_Planner.csproj",
+      "projectUniqueName": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/Wedding_Planner/Wedding_Planner.csproj",
       "projectName": "Wedding_Planner",
-      "projectPath": "C:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\Wedding_Planner\\Wedding_Planner.csproj",
-      "packagesPath": "C:\\Users\\Fabian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\Wedding_Planner\\obj\\",
+      "projectPath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/Wedding_Planner/Wedding_Planner.csproj",
+      "packagesPath": "/Users/fabian/.nuget/packages/",
+      "outputPath": "/Users/fabian/Desktop/Dojo-Assignments/C#/ORM/Wedding_Planner/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Fabian\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/fabian/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
