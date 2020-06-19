@@ -33,6 +33,6 @@ namespace Wedding_Planner.Models
 
         public User Creator {get;set;}
         
-        List<RSVP> RSVP {get;set;}
+        public List<RSVP> RSVP {get;set;}
     }
 }

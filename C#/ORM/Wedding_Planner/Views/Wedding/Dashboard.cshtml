@@ -1,5 +1,9 @@
 @model List<Wedding>
 
+@{
+    int? uid = Context.Session.GetInt32("UserId");
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,11 +33,29 @@
                 <tbody>
                     @foreach (Wedding wedding in Model)
                     {
+                        bool alreadyRSVP = wedding.RSVP.Any(vp => vp.UserId == uid);
+
                         <tr>
                             <td><a href="/wedding/@wedding.WeddingId">@wedding.Bride & @wedding.Groom</a></td>
                             <td>@wedding.Date.ToString("MM / dd / yyyy")</td>
                             <td>@wedding.Address</td>
-                            <td>type of action</td>
+                            <td>
+                                <a asp-controller="Wedding" asp-action="Delete" asp-route-weddingId="@wedding.WeddingId" class="btn btn-danger mt-1">Delete</a>
+                            </td>
+                            <td>
+                                <a asp-action="RSVP" asp-controller="Wedding" asp-route-weddingId="@wedding.WeddingId" class="btn btn-success mt-1">
+
+                                    @if (alreadyRSVP)
+                                    {
+                                        <span>UN-RSVP</span>
+                                    }
+                                    else
+                                    {
+                                        <span>RSVP</span>
+                                    }
+
+                                </a>
+                            </td>
                         </tr>
                     }
                 </tbody>
