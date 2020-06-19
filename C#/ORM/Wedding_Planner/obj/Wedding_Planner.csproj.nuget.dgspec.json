@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\Wedding_Planner\\Wedding_Planner.csproj": {}
+    "C:\\Users\\Fabian\\Desktop\\Dojo-Assignments\\C#\\ORM\\Wedding_Planner\\Wedding_Planner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\Wedding_Planner\\Wedding_Planner.csproj": {
+    "C:\\Users\\Fabian\\Desktop\\Dojo-Assignments\\C#\\ORM\\Wedding_Planner\\Wedding_Planner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\Wedding_Planner\\Wedding_Planner.csproj",
+        "projectUniqueName": "C:\\Users\\Fabian\\Desktop\\Dojo-Assignments\\C#\\ORM\\Wedding_Planner\\Wedding_Planner.csproj",
         "projectName": "Wedding_Planner",
-        "projectPath": "C:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\Wedding_Planner\\Wedding_Planner.csproj",
+        "projectPath": "C:\\Users\\Fabian\\Desktop\\Dojo-Assignments\\C#\\ORM\\Wedding_Planner\\Wedding_Planner.csproj",
         "packagesPath": "C:\\Users\\Fabian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fabian\\Desktop\\Dojo_assignments\\C#\\ORM\\Wedding_Planner\\obj\\",
+        "outputPath": "C:\\Users\\Fabian\\Desktop\\Dojo-Assignments\\C#\\ORM\\Wedding_Planner\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

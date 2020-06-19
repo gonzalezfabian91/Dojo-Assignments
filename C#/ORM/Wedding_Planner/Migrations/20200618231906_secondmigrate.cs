@@ -2,7 +2,7 @@
 
 namespace Wedding_Planner.Migrations
 {
-    public partial class Second : Migration
+    public partial class secondmigrate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

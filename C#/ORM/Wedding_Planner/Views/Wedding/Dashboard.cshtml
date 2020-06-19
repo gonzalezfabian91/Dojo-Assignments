@@ -1,3 +1,5 @@
+@model List<Wedding>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,24 +17,27 @@
                 <a href="/logout">Logout</a>
             </div>
         </div>
-        <table class="table table-dark">
-            <thead>
-                <tr>
-                    <th scope="col">Wedding</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Guest</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>People getting married</td>
-                    <td>Date of Wedding</td>
-                    <td># of guests</td>
-                    <td>type of action</td>
-                </tr>
-            </tbody>
-        </table>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Wedding</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Wedding wedding in Model)
+                    {
+                        <tr>
+                            <td><a href="/wedding/@wedding.WeddingId">@wedding.Bride & @wedding.Groom</a></td>
+                            <td>@wedding.Date.ToString("MM / dd / yyyy")</td>
+                            <td>@wedding.Address</td>
+                            <td>type of action</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         <a href="/new_wedding" class="btn btn-secondary">New Wedding</a>
     </div>
 </body>

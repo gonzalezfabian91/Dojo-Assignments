@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Wedding_Planner.Models;
 
 namespace Wedding_Planner.Migrations
 {
     [DbContext(typeof(Wedding_PlannerContext))]
-    partial class Wedding_PlannerContextModelSnapshot : ModelSnapshot
+    [Migration("20200618231906_secondmigrate")]
+    partial class secondmigrate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,6 +76,8 @@ namespace Wedding_Planner.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
+                    b.Property<int?>("CreatorUserId");
+
                     b.Property<DateTime>("Date");
 
                     b.Property<string>("Groom")
@@ -81,11 +85,9 @@ namespace Wedding_Planner.Migrations
 
                     b.Property<DateTime>("UpdatedAt");
 
-                    b.Property<int>("UserId");
-
                     b.HasKey("WeddingId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("CreatorUserId");
 
                     b.ToTable("Weddings");
                 });
@@ -107,8 +109,7 @@ namespace Wedding_Planner.Migrations
                 {
                     b.HasOne("Wedding_Planner.Models.User", "Creator")
                         .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CreatorUserId");
                 });
 #pragma warning restore 612, 618
         }

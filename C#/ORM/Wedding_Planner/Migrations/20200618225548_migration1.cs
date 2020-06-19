@@ -4,10 +4,28 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Wedding_Planner.Migrations
 {
-    public partial class addedweddingandrsvp : Migration
+    public partial class migration1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    UserId = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    FirstName = table.Column<string>(nullable: false),
+                    LastName = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    Password = table.Column<string>(nullable: false),
+                    CreatedAt = table.Column<DateTime>(nullable: false),
+                    UpdatedAt = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.UserId);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Weddings",
                 columns: table => new
@@ -18,6 +36,8 @@ namespace Wedding_Planner.Migrations
                     Groom = table.Column<string>(nullable: false),
                     Date = table.Column<DateTime>(nullable: false),
                     Address = table.Column<string>(nullable: false),
+                    CreatedAt = table.Column<DateTime>(nullable: false),
+                    UpdatedAt = table.Column<DateTime>(nullable: false),
                     CreatorUserId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -80,6 +100,9 @@ namespace Wedding_Planner.Migrations
 
             migrationBuilder.DropTable(
                 name: "Weddings");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }
