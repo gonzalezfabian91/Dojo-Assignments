@@ -25,6 +25,15 @@
         I want to click anywhere in this paragraph tag and I want to be able to change the background color to whatever is in this input: <input id="txt-in" type="text"/>.
     </p>
     <script>
+        const getValueFromId = (id) => {
+            return document.getElementById(id).value;
+        }
+        const setBackgroundColorById = (id, color) => {
+            document.getElementById(id).style = "background-color: " + color;
+        }
+        const ClickFunction = (el) => {
+            el.style = "background-color: black"
+        }
         document.getElementById("button").onclick = () => {
             setBackgroundColorById("paragraph", "blue");
         }
@@ -39,15 +48,6 @@
         }
         document.getElementById("para").onclick = () => {
             setBackgroundColorById("para", document.getElementById("txt-in").value);
-        }
-        const getValueFromId = (id) => {
-            return document.getElementById(id).value;
-        }
-        const setBackgroundColorById = (id, color) => {
-            document.getElementById(id).style = "background-color: " + color;
-        }
-        const ClickFunction = (el) => {
-            el.style = "background-color: black"
         }
     </script>
 </body>
