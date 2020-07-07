@@ -37,6 +37,9 @@
         document.getElementById("hover-this").onmouseout = () => {
             setBackgroundColorById("body", "white");
         }
+        document.getElementById("para").onclick = () => {
+            setBackgroundColorById("para", document.getElementById("txt-in").value);
+        }
         const getValueFromId = (id) => {
             return document.getElementById(id).value;
         }
@@ -44,7 +47,7 @@
             document.getElementById(id).style = "background-color: " + color;
         }
         const ClickFunction = (el) => {
-            el.style = "background-color: red"
+            el.style = "background-color: black"
         }
     </script>
 </body>
