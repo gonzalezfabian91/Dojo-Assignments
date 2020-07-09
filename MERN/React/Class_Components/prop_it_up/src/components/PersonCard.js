@@ -8,7 +8,7 @@ class PersonCard extends Component{
             <p>Age: {this.props.age}</p>
             <p>Hair Color: {this.props.hairColor}</p>
         </>
-        );
+        )
     }
 }
 
