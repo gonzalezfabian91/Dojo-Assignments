@@ -5,10 +5,13 @@ import User from './components/User'
 
 function App() {
 	const [user,setUser]=useState({firstname:"",lastname:"",email:"",password:""})
+	const [isSubmitted, setIsSubmitted] = useState(false);
 	return (
 		<div className="App">
-			<UserForm setUser={setUser}/>
-			<User user={user}/>
+			<UserForm user={user} setUser={setUser} setIsSubmitted={setIsSubmitted}/>
+			{isSubmitted &&
+				<User user={user}/>
+			}
 		</div>
 	);
 }
