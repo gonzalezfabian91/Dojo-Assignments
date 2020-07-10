@@ -1,0 +1,16 @@
+.App {
+    margin-top: 50px;
+    margin-left: 500px;
+}
+.fname{
+    margin-left: 10px;
+}
+.lname{
+    margin-left: 12px;
+}
+.email{
+    margin-left: 49px;
+}
+.pass{
+    margin-left: 20px;
+}
