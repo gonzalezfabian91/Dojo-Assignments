@@ -20,20 +20,6 @@ const UserForm = (props) => {
         // console.log("Welcome", newUser);
     };
 
-    const isValid = (name) => {
-        if (name.length < 2 && name.length > 0){
-            return false
-        }
-        return true
-    }
-
-    const emailValid = (email) => {
-        if (email.length < 5 && email.length > 0){
-            return false
-        }
-        return true
-    }
-
     const showUser = (e) => {
         e.preventDefault();
         setIsSubmitted(true);
@@ -45,9 +31,6 @@ const UserForm = (props) => {
             <div>
                 <label>First Name:</label>
                 <input type="text" name="firstname" onChange={(e) => onChangeHandler(e)} />
-                {
-                    !isValid(user.firstname) && <p style={{color: 'red'}}>First Name must be 2 Characters</p>
-                }
             </div>
             <div>
                 <label>Last Name:</label>
@@ -56,9 +39,6 @@ const UserForm = (props) => {
             <div>
                 <label>Email:</label>
                 <input type="email" name="email" onChange={(e) => onChangeHandler(e)} />
-                {
-                    !emailValid(user.email) && <p style={{color: 'red'}}>Email must be at least 5 Characters</p>
-                }
             </div>
             <div>
                 <label>Password:</label>
