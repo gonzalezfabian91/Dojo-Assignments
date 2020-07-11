@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const UserForm = props => {
+    const {setUser} = props;
     const [firstName, setFirstName] = useState("");
     const [firstNameError, setFirstNameError] = useState("");
     const [lastName , setLastName] = useState("");
@@ -15,7 +16,7 @@ const UserForm = props => {
         if(Errors === ""){
             e.preventDefault();
             const newUser = {firstName, lastName, email, password};
-            props.setUser(newUser);
+            setUser(newUser);
             console.log("Welcome", newUser);
         }
         else{

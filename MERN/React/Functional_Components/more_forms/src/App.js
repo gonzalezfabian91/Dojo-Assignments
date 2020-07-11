@@ -7,7 +7,7 @@ function App() {
     const [user, setUser]=useState({firsName:"",lastName:"",email:"",password:""})
     return (
         <div className="App">
-            <UserForm setUser={setUser} />
+            <UserForm user={user} setUser={setUser} />
             <User user={user}/>
         </div>
     );
