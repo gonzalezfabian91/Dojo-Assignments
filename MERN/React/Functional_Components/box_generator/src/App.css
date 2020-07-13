@@ -1,4 +1,8 @@
 .App {
     text-align: center;
 }
-
+#colorinput{
+    margin-left: 530px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
