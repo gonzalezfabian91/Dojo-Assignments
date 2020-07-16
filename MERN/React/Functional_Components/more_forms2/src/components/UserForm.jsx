@@ -30,7 +30,7 @@ const UserForm = props => {
         return true
     }
     // const confirmValid = (con) => {
-    //     if (con.confirmPassword !== con.password){
+    //     if (con.input !== con.password){
     //         return false
     //     }
     //     return true
