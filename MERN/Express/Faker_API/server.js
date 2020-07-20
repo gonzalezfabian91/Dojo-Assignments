@@ -26,10 +26,8 @@ app.get("/api/companies/new", (req, res) => {
     res.json(new Company());
 });
 
-//still need to get this one to show both User and Company
 app.get("/api/user/company", (req, res) => {
-    res.json(new User());
-    // res.json(new Company());
+    res.json([new User(), new Company()]);
 });
 
 app.listen(8000, () => {
