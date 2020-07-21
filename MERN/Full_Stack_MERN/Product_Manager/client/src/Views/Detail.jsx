@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
+import {Link} from '@reach/router';
 
 const Detail = ({id}) => {
     const [product, setProduct] = useState({});
@@ -19,10 +20,12 @@ const Detail = ({id}) => {
 
     return(
         <div>
-            {loaded && <div>
+            {loaded && <div className="mt-5">
                 <p>Title: {product.title}</p>
-                <p>Price: {product.price}</p>
+                <p>Price: ${product.price}</p>
                 <p>Description: {product.description}</p>
+                <Link className="btn btn-secondary" to={`/update/${id}`}>Edit</Link>
+                <Link className="btn btn-secondary ml-2" to={"/"}>Go Back</Link>
             </div>}
         </div>
     )

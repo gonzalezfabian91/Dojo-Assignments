@@ -20,6 +20,9 @@ const Product = props => {
                 console.log(err.responce)
             })
     }
+    const removeProduct = (id) => {
+        setProducts(products.filter(product => product._id !== id))
+    };
     const addProduct = (product) => {
         setProducts([...products, product])
     };
@@ -28,7 +31,7 @@ const Product = props => {
         <div>
             <ProductForm addProduct={addProduct} getAllProductsAPI={getAllProductsAPI}/>
             <hr/>
-            <ProductList products={products}/>
+            <ProductList products={products} removeProduct={removeProduct}/>
         </div>
     )
 }
