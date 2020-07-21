@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import axios from 'axios';
+import { navigate } from '@reach/router';
 
-const ProductForm = props => {
+const ProductForm = ({addProduct}) => {
     const [title, setTitle] = useState('');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
@@ -13,8 +14,15 @@ const ProductForm = props => {
             price,
             description
         })
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
+        .then(res => {
+            console.log(res);
+            addProduct(res.data);
+            navigate("/");
+
+        })
+        .catch(err => {
+            console.log(err.response);
+        })
     }
 
     return(
