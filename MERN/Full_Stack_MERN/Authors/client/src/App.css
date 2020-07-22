@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+#nameinput{
+    margin-left: 535px;
+}
+
+#quoteinput{
+    margin-left: 535px;
+}
+
+#table{
+    margin-left: 350px;
+}
+
+#table2{
+    width: 500px;
+    margin-left: 400px;
+    margin-top: 20px;
+}
