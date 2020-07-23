@@ -41,8 +41,7 @@ function App() {
             }
         }
         const authorsCopy = [...authors];
-        authorsCopy[idx] = {name: author.name, quote: author.quote}
-
+        authorsCopy[idx] = author
         setAuthors(authorsCopy);
     };
 

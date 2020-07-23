@@ -59,7 +59,7 @@ const UpdateAuthor = ({id, updateAuthor}) => {
                 <div>
                     <p></p>
                     <input type="submit" value="Update" className="btn btn-secondary"/>
-                    <Link className="btn btn-secondary ml-2" to="/">Cancle</Link>
+                    <Link className="btn btn-secondary ml-2" to="/">Cancel</Link>
                 </div>
             </form>
         </div>
