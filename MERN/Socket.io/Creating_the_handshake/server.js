@@ -13,6 +13,6 @@ io.on("connection", socket => {
 
     socket.on("message_from_client", data => {
         console.log(data);
-        socket.emit("send_to_other_client", {"message":"this is comming from the server"});
+        socket.broadcast.emit("update_number", {"number": data.number});
     });
 });
